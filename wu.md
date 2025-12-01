@@ -23,7 +23,7 @@ To solve this challenge, I will use Volatility 3 - the world's most widely used 
 
 ## Some facts to know
 
-Before diving into knowing what command to use. We need to know how some more things.
+Before diving into knowing what command to use. We need to know how some things work.
 
 ### How ```cmd.exe``` works
 
