@@ -39,6 +39,15 @@ So technically, when I type a command like ```dir```, I am typing it into ```con
 When I opened a cmd, typed a few commands, and then pressed the "Up Arrow" in my keyboard, it brings back the previous commands that I typed (not all but enough).
 
 To make that "Up Arrow" feature work, ```conhost.exe``` must save a list of everything I typed in its own memory. In other words, it keeps a "History Buffer" in the RAM.
+
+### How an image is stored in Windows memory
+
+When opening a file (e.g., an image) stored on the hard disk, the CPU does not read the data directly from the disk; it reads from the RAM.
+
+​In reality, the speed of a hard disk is nothing compared to the memory. Therefore, when we need to operate on any file, the system loads its data into the memory, and the CPU reads from there.
+
+​Moreover, there is a special feature in Windows OS called File System Cache. This mechanism does not remove the file from RAM immediately, even after it is deleted from the hard disk. It keeps the data there until the RAM is full or other data needs space.
+
 ## Solve
 By utilizing some facts we know, we will use the ```windows.consoles``` plugin, which can looks for Windows console buffers.
 ```console
